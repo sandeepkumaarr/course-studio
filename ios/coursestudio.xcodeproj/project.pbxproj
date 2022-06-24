@@ -8,12 +8,31 @@
 
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* coursestudioTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* coursestudioTests.m */; };
-		0C80B921A6F3F58F76C31292 /* libPods-coursestudio.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DCACB8F33CDC322A6C60F78 /* libPods-coursestudio.a */; };
+		03B18A2589A14B2AA686F0CB /* SF-Pro-Text-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = D07A30AA7F124EB397650600 /* SF-Pro-Text-Medium.otf */; };
+		099983F56D71466E888D233E /* SF-Pro-Text-HeavyItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 21C0DEE671F146AB9F53E0A5 /* SF-Pro-Text-HeavyItalic.otf */; };
+		0A3217E7D7C546F2A259B7C7 /* SF-Pro-Text-BlackItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 38435C06A0744655B57CBE40 /* SF-Pro-Text-BlackItalic.otf */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		7699B88040F8A987B510C191 /* libPods-coursestudio-coursestudioTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-coursestudio-coursestudioTests.a */; };
+		325C653A491251DD6BF66663 /* libPods-coursestudio.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1584252AE7BB80EFEB083AA8 /* libPods-coursestudio.a */; };
+		38A1EAA848F94E678C027458 /* SF-Pro-Text-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 47E45F93F3544D2A8DE84920 /* SF-Pro-Text-Bold.otf */; };
+		51591EAE86A644BBBDACB6DF /* SF-Pro-Text-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4B64AA9245A24EF784868CF6 /* SF-Pro-Text-Thin.otf */; };
+		585777DB675F44DE8B2576C0 /* SF-Pro-Text-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8001079BDB6B4985B8EBAD1B /* SF-Pro-Text-Semibold.otf */; };
+		688427D44B29476EBFD74EE2 /* SF-Pro-Text-SemiboldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = C70F72DC53F94C759FC8EF06 /* SF-Pro-Text-SemiboldItalic.otf */; };
+		6C187D406A06AFB1DF96FF8E /* libPods-coursestudio-coursestudioTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F0A1B02141A32F4267B3B4C7 /* libPods-coursestudio-coursestudioTests.a */; };
+		78B2124A6F6D472CBCA3B9BF /* SF-Pro-Text-BoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4C9D6C3F47E44541B87DF3B5 /* SF-Pro-Text-BoldItalic.otf */; };
+		7DEDE8752864DA4C0071840D /* dummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DEDE8742864DA4C0071840D /* dummy.swift */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		846208516D81438985D712A2 /* SF-Pro-Text-Heavy.otf in Resources */ = {isa = PBXBuildFile; fileRef = AFD4D29D61104F73A03D4B14 /* SF-Pro-Text-Heavy.otf */; };
+		94FFF9508B9E49CF8B81F9F8 /* SF-Pro-Text-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3B504818AC5A4F998B466F5B /* SF-Pro-Text-Regular.otf */; };
+		A02DC6EBE82E4DD6A3002708 /* SF-Pro-Text-ThinItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 25609C51E05443249C016244 /* SF-Pro-Text-ThinItalic.otf */; };
+		A14933029951412FB166A716 /* SF-Pro-Text-RegularItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0BD74871ED374436AB5F476A /* SF-Pro-Text-RegularItalic.otf */; };
+		A32A59B796134422AC5782F0 /* SF-Pro-Text-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4F0C4B4293A346ECB8B64851 /* SF-Pro-Text-Black.otf */; };
+		ABC16BD098E54E11A4C3858A /* SF-Pro-Text-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = C5835F8ABF3B42E6A4B54CFC /* SF-Pro-Text-Light.otf */; };
+		ABE6F20C6E23406BAA00D6FA /* SF-Pro-Text-Ultralight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 77BAA09B86A543EC829CB13D /* SF-Pro-Text-Ultralight.otf */; };
+		E64E761834DB46DCB3EF3502 /* SF-Pro-Text-MediumItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0BF74EE6DBC94B4DA0744CA0 /* SF-Pro-Text-MediumItalic.otf */; };
+		F6BC84AC13F5408394085B75 /* SF-Pro-Text-LightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 626891A77DC4408AB03A2C41 /* SF-Pro-Text-LightItalic.otf */; };
+		F6F1F92AAFE342A1A165F5DB /* SF-Pro-Text-UltralightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = CE2D36D0E06A40EF91DE0404 /* SF-Pro-Text-UltralightItalic.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,20 +49,40 @@
 		00E356EE1AD99517003FC87E /* coursestudioTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = coursestudioTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* coursestudioTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = coursestudioTests.m; sourceTree = "<group>"; };
+		0BD74871ED374436AB5F476A /* SF-Pro-Text-RegularItalic.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "SF-Pro-Text-RegularItalic.otf"; path = "../src/assets/fonts/SF-Pro-Text-RegularItalic.otf"; sourceTree = "<group>"; };
+		0BF74EE6DBC94B4DA0744CA0 /* SF-Pro-Text-MediumItalic.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "SF-Pro-Text-MediumItalic.otf"; path = "../src/assets/fonts/SF-Pro-Text-MediumItalic.otf"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* coursestudio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = coursestudio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = coursestudio/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegate.mm; path = coursestudio/AppDelegate.mm; sourceTree = "<group>"; };
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = coursestudio/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = coursestudio/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = coursestudio/main.m; sourceTree = "<group>"; };
-		19F6CBCC0A4E27FBF8BF4A61 /* libPods-coursestudio-coursestudioTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-coursestudio-coursestudioTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		3B4392A12AC88292D35C810B /* Pods-coursestudio.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-coursestudio.debug.xcconfig"; path = "Target Support Files/Pods-coursestudio/Pods-coursestudio.debug.xcconfig"; sourceTree = "<group>"; };
-		5709B34CF0A7D63546082F79 /* Pods-coursestudio.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-coursestudio.release.xcconfig"; path = "Target Support Files/Pods-coursestudio/Pods-coursestudio.release.xcconfig"; sourceTree = "<group>"; };
-		5B7EB9410499542E8C5724F5 /* Pods-coursestudio-coursestudioTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-coursestudio-coursestudioTests.debug.xcconfig"; path = "Target Support Files/Pods-coursestudio-coursestudioTests/Pods-coursestudio-coursestudioTests.debug.xcconfig"; sourceTree = "<group>"; };
-		5DCACB8F33CDC322A6C60F78 /* libPods-coursestudio.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-coursestudio.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1584252AE7BB80EFEB083AA8 /* libPods-coursestudio.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-coursestudio.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		21C0DEE671F146AB9F53E0A5 /* SF-Pro-Text-HeavyItalic.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "SF-Pro-Text-HeavyItalic.otf"; path = "../src/assets/fonts/SF-Pro-Text-HeavyItalic.otf"; sourceTree = "<group>"; };
+		25609C51E05443249C016244 /* SF-Pro-Text-ThinItalic.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "SF-Pro-Text-ThinItalic.otf"; path = "../src/assets/fonts/SF-Pro-Text-ThinItalic.otf"; sourceTree = "<group>"; };
+		38435C06A0744655B57CBE40 /* SF-Pro-Text-BlackItalic.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "SF-Pro-Text-BlackItalic.otf"; path = "../src/assets/fonts/SF-Pro-Text-BlackItalic.otf"; sourceTree = "<group>"; };
+		3B504818AC5A4F998B466F5B /* SF-Pro-Text-Regular.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "SF-Pro-Text-Regular.otf"; path = "../src/assets/fonts/SF-Pro-Text-Regular.otf"; sourceTree = "<group>"; };
+		4287D78F2464D7E41AA83BBD /* Pods-coursestudio-coursestudioTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-coursestudio-coursestudioTests.release.xcconfig"; path = "Target Support Files/Pods-coursestudio-coursestudioTests/Pods-coursestudio-coursestudioTests.release.xcconfig"; sourceTree = "<group>"; };
+		47E45F93F3544D2A8DE84920 /* SF-Pro-Text-Bold.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "SF-Pro-Text-Bold.otf"; path = "../src/assets/fonts/SF-Pro-Text-Bold.otf"; sourceTree = "<group>"; };
+		4B64AA9245A24EF784868CF6 /* SF-Pro-Text-Thin.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "SF-Pro-Text-Thin.otf"; path = "../src/assets/fonts/SF-Pro-Text-Thin.otf"; sourceTree = "<group>"; };
+		4C9D6C3F47E44541B87DF3B5 /* SF-Pro-Text-BoldItalic.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "SF-Pro-Text-BoldItalic.otf"; path = "../src/assets/fonts/SF-Pro-Text-BoldItalic.otf"; sourceTree = "<group>"; };
+		4F0C4B4293A346ECB8B64851 /* SF-Pro-Text-Black.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "SF-Pro-Text-Black.otf"; path = "../src/assets/fonts/SF-Pro-Text-Black.otf"; sourceTree = "<group>"; };
+		626891A77DC4408AB03A2C41 /* SF-Pro-Text-LightItalic.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "SF-Pro-Text-LightItalic.otf"; path = "../src/assets/fonts/SF-Pro-Text-LightItalic.otf"; sourceTree = "<group>"; };
+		77BAA09B86A543EC829CB13D /* SF-Pro-Text-Ultralight.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "SF-Pro-Text-Ultralight.otf"; path = "../src/assets/fonts/SF-Pro-Text-Ultralight.otf"; sourceTree = "<group>"; };
+		7DEDE8732864DA4B0071840D /* coursestudio-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "coursestudio-Bridging-Header.h"; sourceTree = "<group>"; };
+		7DEDE8742864DA4C0071840D /* dummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dummy.swift; sourceTree = "<group>"; };
+		8001079BDB6B4985B8EBAD1B /* SF-Pro-Text-Semibold.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "SF-Pro-Text-Semibold.otf"; path = "../src/assets/fonts/SF-Pro-Text-Semibold.otf"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = coursestudio/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		89C6BE57DB24E9ADA2F236DE /* Pods-coursestudio-coursestudioTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-coursestudio-coursestudioTests.release.xcconfig"; path = "Target Support Files/Pods-coursestudio-coursestudioTests/Pods-coursestudio-coursestudioTests.release.xcconfig"; sourceTree = "<group>"; };
+		9207D9E61B891F96EE57B2C0 /* Pods-coursestudio-coursestudioTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-coursestudio-coursestudioTests.debug.xcconfig"; path = "Target Support Files/Pods-coursestudio-coursestudioTests/Pods-coursestudio-coursestudioTests.debug.xcconfig"; sourceTree = "<group>"; };
+		9C6252462518904DA0730F92 /* Pods-coursestudio.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-coursestudio.debug.xcconfig"; path = "Target Support Files/Pods-coursestudio/Pods-coursestudio.debug.xcconfig"; sourceTree = "<group>"; };
+		AFD4D29D61104F73A03D4B14 /* SF-Pro-Text-Heavy.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "SF-Pro-Text-Heavy.otf"; path = "../src/assets/fonts/SF-Pro-Text-Heavy.otf"; sourceTree = "<group>"; };
+		BA73ABA4E48A0C3B3A5BA538 /* Pods-coursestudio.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-coursestudio.release.xcconfig"; path = "Target Support Files/Pods-coursestudio/Pods-coursestudio.release.xcconfig"; sourceTree = "<group>"; };
+		C5835F8ABF3B42E6A4B54CFC /* SF-Pro-Text-Light.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "SF-Pro-Text-Light.otf"; path = "../src/assets/fonts/SF-Pro-Text-Light.otf"; sourceTree = "<group>"; };
+		C70F72DC53F94C759FC8EF06 /* SF-Pro-Text-SemiboldItalic.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "SF-Pro-Text-SemiboldItalic.otf"; path = "../src/assets/fonts/SF-Pro-Text-SemiboldItalic.otf"; sourceTree = "<group>"; };
+		CE2D36D0E06A40EF91DE0404 /* SF-Pro-Text-UltralightItalic.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "SF-Pro-Text-UltralightItalic.otf"; path = "../src/assets/fonts/SF-Pro-Text-UltralightItalic.otf"; sourceTree = "<group>"; };
+		D07A30AA7F124EB397650600 /* SF-Pro-Text-Medium.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "SF-Pro-Text-Medium.otf"; path = "../src/assets/fonts/SF-Pro-Text-Medium.otf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		F0A1B02141A32F4267B3B4C7 /* libPods-coursestudio-coursestudioTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-coursestudio-coursestudioTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,7 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7699B88040F8A987B510C191 /* libPods-coursestudio-coursestudioTests.a in Frameworks */,
+				6C187D406A06AFB1DF96FF8E /* libPods-coursestudio-coursestudioTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,7 +98,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0C80B921A6F3F58F76C31292 /* libPods-coursestudio.a in Frameworks */,
+				325C653A491251DD6BF66663 /* libPods-coursestudio.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,10 +139,35 @@
 			isa = PBXGroup;
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
-				5DCACB8F33CDC322A6C60F78 /* libPods-coursestudio.a */,
-				19F6CBCC0A4E27FBF8BF4A61 /* libPods-coursestudio-coursestudioTests.a */,
+				1584252AE7BB80EFEB083AA8 /* libPods-coursestudio.a */,
+				F0A1B02141A32F4267B3B4C7 /* libPods-coursestudio-coursestudioTests.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		56870EB87F7646389F0D0200 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4F0C4B4293A346ECB8B64851 /* SF-Pro-Text-Black.otf */,
+				38435C06A0744655B57CBE40 /* SF-Pro-Text-BlackItalic.otf */,
+				47E45F93F3544D2A8DE84920 /* SF-Pro-Text-Bold.otf */,
+				4C9D6C3F47E44541B87DF3B5 /* SF-Pro-Text-BoldItalic.otf */,
+				AFD4D29D61104F73A03D4B14 /* SF-Pro-Text-Heavy.otf */,
+				21C0DEE671F146AB9F53E0A5 /* SF-Pro-Text-HeavyItalic.otf */,
+				C5835F8ABF3B42E6A4B54CFC /* SF-Pro-Text-Light.otf */,
+				626891A77DC4408AB03A2C41 /* SF-Pro-Text-LightItalic.otf */,
+				D07A30AA7F124EB397650600 /* SF-Pro-Text-Medium.otf */,
+				0BF74EE6DBC94B4DA0744CA0 /* SF-Pro-Text-MediumItalic.otf */,
+				3B504818AC5A4F998B466F5B /* SF-Pro-Text-Regular.otf */,
+				0BD74871ED374436AB5F476A /* SF-Pro-Text-RegularItalic.otf */,
+				8001079BDB6B4985B8EBAD1B /* SF-Pro-Text-Semibold.otf */,
+				C70F72DC53F94C759FC8EF06 /* SF-Pro-Text-SemiboldItalic.otf */,
+				4B64AA9245A24EF784868CF6 /* SF-Pro-Text-Thin.otf */,
+				25609C51E05443249C016244 /* SF-Pro-Text-ThinItalic.otf */,
+				77BAA09B86A543EC829CB13D /* SF-Pro-Text-Ultralight.otf */,
+				CE2D36D0E06A40EF91DE0404 /* SF-Pro-Text-UltralightItalic.otf */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
@@ -116,12 +180,15 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				7DEDE8742864DA4C0071840D /* dummy.swift */,
 				13B07FAE1A68108700A75B9A /* coursestudio */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* coursestudioTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				BBD78D7AC51CEA395F1C20DB /* Pods */,
+				56870EB87F7646389F0D0200 /* Resources */,
+				7DEDE8732864DA4B0071840D /* coursestudio-Bridging-Header.h */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -140,10 +207,10 @@
 		BBD78D7AC51CEA395F1C20DB /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				3B4392A12AC88292D35C810B /* Pods-coursestudio.debug.xcconfig */,
-				5709B34CF0A7D63546082F79 /* Pods-coursestudio.release.xcconfig */,
-				5B7EB9410499542E8C5724F5 /* Pods-coursestudio-coursestudioTests.debug.xcconfig */,
-				89C6BE57DB24E9ADA2F236DE /* Pods-coursestudio-coursestudioTests.release.xcconfig */,
+				9C6252462518904DA0730F92 /* Pods-coursestudio.debug.xcconfig */,
+				BA73ABA4E48A0C3B3A5BA538 /* Pods-coursestudio.release.xcconfig */,
+				9207D9E61B891F96EE57B2C0 /* Pods-coursestudio-coursestudioTests.debug.xcconfig */,
+				4287D78F2464D7E41AA83BBD /* Pods-coursestudio-coursestudioTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -155,12 +222,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "coursestudioTests" */;
 			buildPhases = (
-				A55EABD7B0C7F3A422A6CC61 /* [CP] Check Pods Manifest.lock */,
+				E2CA2C9D640E604B48327A9F /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
 				00E356EB1AD99517003FC87E /* Frameworks */,
 				00E356EC1AD99517003FC87E /* Resources */,
-				C59DA0FBD6956966B86A3779 /* [CP] Embed Pods Frameworks */,
-				F6A41C54EA430FDDC6A6ED99 /* [CP] Copy Pods Resources */,
+				162D238C4FEF04E48C19B976 /* [CP] Embed Pods Frameworks */,
+				1A4A593CA3374C48C51E5EEF /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -176,14 +243,14 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "coursestudio" */;
 			buildPhases = (
-				C38B50BA6285516D6DCD4F65 /* [CP] Check Pods Manifest.lock */,
+				3D1BF97CA36A358676B0BDF2 /* [CP] Check Pods Manifest.lock */,
 				FD10A7F022414F080027D42C /* Start Packager */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
-				00EEFC60759A1932668264C0 /* [CP] Embed Pods Frameworks */,
-				E235C05ADACE081382539298 /* [CP] Copy Pods Resources */,
+				C67033DFBF0FABD30CA34DAD /* [CP] Embed Pods Frameworks */,
+				4D5E09764063053AFD2B9A60 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -207,7 +274,7 @@
 						TestTargetID = 13B07F861A680F5B00A75B9A;
 					};
 					13B07F861A680F5B00A75B9A = {
-						LastSwiftMigration = 1120;
+						LastSwiftMigration = 1320;
 					};
 				};
 			};
@@ -244,6 +311,24 @@
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				A32A59B796134422AC5782F0 /* SF-Pro-Text-Black.otf in Resources */,
+				0A3217E7D7C546F2A259B7C7 /* SF-Pro-Text-BlackItalic.otf in Resources */,
+				38A1EAA848F94E678C027458 /* SF-Pro-Text-Bold.otf in Resources */,
+				78B2124A6F6D472CBCA3B9BF /* SF-Pro-Text-BoldItalic.otf in Resources */,
+				846208516D81438985D712A2 /* SF-Pro-Text-Heavy.otf in Resources */,
+				099983F56D71466E888D233E /* SF-Pro-Text-HeavyItalic.otf in Resources */,
+				ABC16BD098E54E11A4C3858A /* SF-Pro-Text-Light.otf in Resources */,
+				F6BC84AC13F5408394085B75 /* SF-Pro-Text-LightItalic.otf in Resources */,
+				03B18A2589A14B2AA686F0CB /* SF-Pro-Text-Medium.otf in Resources */,
+				E64E761834DB46DCB3EF3502 /* SF-Pro-Text-MediumItalic.otf in Resources */,
+				94FFF9508B9E49CF8B81F9F8 /* SF-Pro-Text-Regular.otf in Resources */,
+				A14933029951412FB166A716 /* SF-Pro-Text-RegularItalic.otf in Resources */,
+				585777DB675F44DE8B2576C0 /* SF-Pro-Text-Semibold.otf in Resources */,
+				688427D44B29476EBFD74EE2 /* SF-Pro-Text-SemiboldItalic.otf in Resources */,
+				51591EAE86A644BBBDACB6DF /* SF-Pro-Text-Thin.otf in Resources */,
+				A02DC6EBE82E4DD6A3002708 /* SF-Pro-Text-ThinItalic.otf in Resources */,
+				ABE6F20C6E23406BAA00D6FA /* SF-Pro-Text-Ultralight.otf in Resources */,
+				F6F1F92AAFE342A1A165F5DB /* SF-Pro-Text-UltralightItalic.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,46 +349,41 @@
 			shellPath = /bin/sh;
 			shellScript = "set -e\n\nexport NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh\n";
 		};
-		00EEFC60759A1932668264C0 /* [CP] Embed Pods Frameworks */ = {
+		162D238C4FEF04E48C19B976 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-coursestudio/Pods-coursestudio-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-coursestudio-coursestudioTests/Pods-coursestudio-coursestudioTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-coursestudio/Pods-coursestudio-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-coursestudio-coursestudioTests/Pods-coursestudio-coursestudioTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-coursestudio/Pods-coursestudio-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-coursestudio-coursestudioTests/Pods-coursestudio-coursestudioTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		A55EABD7B0C7F3A422A6CC61 /* [CP] Check Pods Manifest.lock */ = {
+		1A4A593CA3374C48C51E5EEF /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-coursestudio-coursestudioTests/Pods-coursestudio-coursestudioTests-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
+			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-coursestudio-coursestudioTests-checkManifestLockResult.txt",
+				"${PODS_ROOT}/Target Support Files/Pods-coursestudio-coursestudioTests/Pods-coursestudio-coursestudioTests-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-coursestudio-coursestudioTests/Pods-coursestudio-coursestudioTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C38B50BA6285516D6DCD4F65 /* [CP] Check Pods Manifest.lock */ = {
+		3D1BF97CA36A358676B0BDF2 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -325,24 +405,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C59DA0FBD6956966B86A3779 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-coursestudio-coursestudioTests/Pods-coursestudio-coursestudioTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-coursestudio-coursestudioTests/Pods-coursestudio-coursestudioTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-coursestudio-coursestudioTests/Pods-coursestudio-coursestudioTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E235C05ADACE081382539298 /* [CP] Copy Pods Resources */ = {
+		4D5E09764063053AFD2B9A60 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -359,21 +422,43 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-coursestudio/Pods-coursestudio-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		F6A41C54EA430FDDC6A6ED99 /* [CP] Copy Pods Resources */ = {
+		C67033DFBF0FABD30CA34DAD /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-coursestudio-coursestudioTests/Pods-coursestudio-coursestudioTests-resources-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-coursestudio/Pods-coursestudio-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			name = "[CP] Copy Pods Resources";
+			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-coursestudio-coursestudioTests/Pods-coursestudio-coursestudioTests-resources-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-coursestudio/Pods-coursestudio-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-coursestudio-coursestudioTests/Pods-coursestudio-coursestudioTests-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-coursestudio/Pods-coursestudio-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E2CA2C9D640E604B48327A9F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-coursestudio-coursestudioTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FD10A7F022414F080027D42C /* Start Packager */ = {
@@ -411,6 +496,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */,
+				7DEDE8752864DA4C0071840D /* dummy.swift in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -428,8 +514,9 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5B7EB9410499542E8C5724F5 /* Pods-coursestudio-coursestudioTests.debug.xcconfig */;
+			baseConfigurationReference = 9207D9E61B891F96EE57B2C0 /* Pods-coursestudio-coursestudioTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -455,8 +542,9 @@
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 89C6BE57DB24E9ADA2F236DE /* Pods-coursestudio-coursestudioTests.release.xcconfig */;
+			baseConfigurationReference = 4287D78F2464D7E41AA83BBD /* Pods-coursestudio-coursestudioTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
 				INFOPLIST_FILE = coursestudioTests/Info.plist;
@@ -479,7 +567,7 @@
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3B4392A12AC88292D35C810B /* Pods-coursestudio.debug.xcconfig */;
+			baseConfigurationReference = 9C6252462518904DA0730F92 /* Pods-coursestudio.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -497,6 +585,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = coursestudio;
+				SWIFT_OBJC_BRIDGING_HEADER = "coursestudio-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -505,7 +594,7 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5709B34CF0A7D63546082F79 /* Pods-coursestudio.release.xcconfig */;
+			baseConfigurationReference = BA73ABA4E48A0C3B3A5BA538 /* Pods-coursestudio.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -522,6 +611,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = coursestudio;
+				SWIFT_OBJC_BRIDGING_HEADER = "coursestudio-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
