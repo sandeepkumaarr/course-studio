@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>399246441840-mm24ilssvb33kivb5gs9a7rk169qmofm.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.399246441840-mm24ilssvb33kivb5gs9a7rk169qmofm</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>399246441840-isnr8ed3f64krik5f0og3rajvqik7h6h.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyAx6gH0Kj8PxGv0tWz-xuDEY4xe6zTGBe8</string>
+	<key>GCM_SENDER_ID</key>
+	<string>399246441840</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.coursestudio.app</string>
+	<key>PROJECT_ID</key>
+	<string>course-studio-b07b6</string>
+	<key>STORAGE_BUCKET</key>
+	<string>course-studio-b07b6.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:399246441840:ios:7a670654e39354cfe8e3b5</string>
+</dict>
+</plist>
