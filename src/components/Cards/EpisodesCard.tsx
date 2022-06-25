@@ -14,8 +14,12 @@ dayjs.extend(customParseFormat);
 
 const EpisodesCard = () => {
   return (
-    <Card flexDirection={'row'} alignItems="flex-end">
-      <Box>
+    <Card
+      flexDirection={'row'}
+      alignItems="flex-end"
+      variant={'episodes'}
+      marginTop={5}>
+      <Card variant={'imageShadow'}>
         <FastImage
           style={styles.image}
           source={{
@@ -24,7 +28,7 @@ const EpisodesCard = () => {
           }}
           resizeMode={FastImage.resizeMode.contain}
         />
-      </Box>
+      </Card>
 
       <Box flex={1} paddingHorizontal={5}>
         <Box flexDirection={'row'}>
@@ -36,7 +40,8 @@ const EpisodesCard = () => {
         <Box
           flexDirection={'row'}
           alignItems="center"
-          justifyContent={'space-between'}>
+          justifyContent={'space-between'}
+          marginTop={3}>
           <Box paddingLeft={3}>
             <Text variant={'cardDate'} numberOfLines={1}>
               {dayjs('2022-06-21T18:38:48+00:00', `YY/MM/DD, hh:mm`).format(

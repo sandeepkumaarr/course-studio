@@ -1,8 +1,14 @@
 import {createTheme} from '@shopify/restyle';
-import {moderateScale, moderateVerticalScale} from 'react-native-size-matters';
+import {
+  moderateScale,
+  moderateVerticalScale,
+  verticalScale,
+} from 'react-native-size-matters';
 
 const palette = {
   cyanBlue: '#186eb7',
+  cyanMedium: '#4A97CA',
+  cyanLight: 'rgba(24,110,183,0.5)',
   WhiteSmoke: '#e5e5e5',
   grey: '#303030',
   limegreen: '#9deec4',
@@ -21,7 +27,8 @@ const theme = createTheme({
     headerText: palette.black,
     authBackground: palette.WhiteSmoke,
     buttonBackground: palette.grey,
-    bottomTabHighlight: palette.meatBrown,
+    bottomTabHighlight: palette.cyanLight,
+    bottomTabBackground: palette.cyanMedium,
   },
   spacing: {
     nil: 0,
@@ -110,12 +117,42 @@ const theme = createTheme({
       fontWeight: '500',
       fontFamily: 'SFProText-Regular',
     },
+
+    miniplayerText: {
+      flex: 1,
+      flexWrap: 'wrap',
+      fontSize: moderateScale(13),
+      color: 'buttonText',
+      fontWeight: '500',
+      fontFamily: 'SFProText-Regular',
+    },
   },
 
   cardVariants: {
     defaults: {},
-    episodes: {},
+    episodes: {
+      backgroundColor: 'buttonText',
+      paddingVertical: 10,
+      borderRadius: 10,
+      marginHorizontal: 2,
+    },
+    downloads: {
+      backgroundColor: 'buttonText',
+      paddingVertical: 10,
+      borderRadius: 10,
+      marginHorizontal: 2,
+    },
+    imageShadow: {
+      shadowColor: 'buttonText_off',
+      shadowOffset: {
+        width: Math.round(verticalScale(1)),
+        height: Math.round(verticalScale(1)),
+      },
+      shadowOpacity: 0.5,
+      elevation: 4,
+    },
   },
+  boxVariants: {},
 });
 
 export type Theme = typeof theme;

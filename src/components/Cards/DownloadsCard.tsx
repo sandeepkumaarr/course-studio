@@ -1,4 +1,4 @@
-import {StyleSheet} from 'react-native';
+import {StyleSheet, Dimensions} from 'react-native';
 import React, {useState} from 'react';
 import Card from './Card';
 import Box from '../Box';
@@ -9,12 +9,14 @@ import * as Progress from 'react-native-progress';
 import Button from '../Button';
 import Text from '../Text';
 
+const {width} = Dimensions.get('window');
+
 const DownloadsCard = () => {
   const [isPlay, setIsPlay] = useState(false);
 
   return (
-    <Card flexDirection={'row'} alignItems="flex-end">
-      <Box>
+    <Card flexDirection={'row'} alignItems="flex-end" variant={'downloads'}>
+      <Card variant={'imageShadow'}>
         <FastImage
           style={styles.image}
           source={{
@@ -23,7 +25,7 @@ const DownloadsCard = () => {
           }}
           resizeMode={FastImage.resizeMode.contain}
         />
-      </Box>
+      </Card>
 
       <Box flex={1} paddingHorizontal={5}>
         <Box flexDirection={'row'}>
@@ -35,11 +37,15 @@ const DownloadsCard = () => {
         <Box
           flexDirection={'row'}
           alignItems="center"
-          justifyContent={'space-between'}>
+          justifyContent={'space-between'}
+          marginTop={5}>
           <Box>
             <Progress.Bar
               progress={0.3}
-              width={Math.round(moderateScale(140))}
+              color="#9deec4"
+              unfilledColor="#e5e5e5"
+              borderColor="#303030"
+              width={Math.round(moderateScale(width / 3.2))}
             />
           </Box>
 
@@ -63,8 +69,8 @@ export default DownloadsCard;
 
 const styles = StyleSheet.create({
   image: {
-    width: Math.round(moderateScale(150)),
-    height: Math.round(moderateScale(130)),
+    width: Math.round(moderateScale(140)),
+    height: Math.round(moderateScale(120)),
     borderRadius: 20,
   },
 });

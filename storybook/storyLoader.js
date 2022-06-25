@@ -6,11 +6,13 @@
 function loadStories() {
   require('../src/stories/Button/Button.stories');
   require('../src/stories/Card/Card.stories');
+  require('../src/stories/MinimizedPlayer/MinimizedPlayer.stories');
 }
 
 const stories = [
   '../src/stories/Button/Button.stories',
   '../src/stories/Card/Card.stories',
+  '../src/stories/MinimizedPlayer/MinimizedPlayer.stories',
 ];
 
 module.exports = {

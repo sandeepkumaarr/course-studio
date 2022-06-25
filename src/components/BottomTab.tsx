@@ -15,7 +15,7 @@ const BottomTab = () => {
   return (
     <Box
       flexDirection={'row'}
-      backgroundColor="buttonBackground"
+      backgroundColor="bottomTabBackground"
       justifyContent={'space-around'}
       alignItems="center">
       <Button
@@ -23,13 +23,13 @@ const BottomTab = () => {
         backgroundColor={
           name === routes.HOME_SCREEN
             ? 'bottomTabHighlight'
-            : 'buttonBackground'
+            : 'bottomTabBackground'
         }
         paddingVertical={5}
         paddingHorizontal={20}
         showIcon
-        iconWidth={`${scale(50)}`}
-        iconHeight={`${verticalScale(40)}`}
+        iconWidth={`${scale(30)}`}
+        iconHeight={`${verticalScale(35)}`}
         buttonIcon={'home'}
         onPress={() => {
           if (name !== routes.HOME_SCREEN) {
@@ -43,13 +43,13 @@ const BottomTab = () => {
         backgroundColor={
           name === routes.DOWNLOAD_SCREEN
             ? 'bottomTabHighlight'
-            : 'buttonBackground'
+            : 'bottomTabBackground'
         }
         paddingVertical={5}
         paddingHorizontal={20}
         showIcon
-        iconWidth={`${scale(50)}`}
-        iconHeight={`${verticalScale(40)}`}
+        iconWidth={`${scale(35)}`}
+        iconHeight={`${verticalScale(35)}`}
         buttonIcon={'download'}
         onPress={() => {
           if (name !== routes.DOWNLOAD_SCREEN) {

@@ -1,6 +1,18 @@
-import {SafeAreaView, StyleSheet, TouchableOpacity} from 'react-native';
+import {
+  SafeAreaView,
+  ScrollView,
+  StyleSheet,
+  TouchableOpacity,
+} from 'react-native';
 import React from 'react';
-import {BottomTab, Box, Button, Text} from '../components';
+import {
+  BottomTab,
+  Box,
+  Button,
+  EpisodesCard,
+  MinimizedPlayer,
+  Text,
+} from '../components';
 import {moderateScale, scale, verticalScale} from 'react-native-size-matters';
 import auth from '@react-native-firebase/auth';
 import {useDispatch, useSelector} from 'react-redux';
@@ -76,7 +88,18 @@ const HomeScreen = () => {
         </Popover>
       </Box>
 
+      <Box marginTop={10}>
+        <ScrollView>
+          <EpisodesCard />
+          <EpisodesCard />
+          <EpisodesCard />
+          <EpisodesCard />
+          <EpisodesCard />
+        </ScrollView>
+      </Box>
+
       <Box flex={1} position={'absolute'} bottom={0} width={'100%'}>
+        <MinimizedPlayer />
         <BottomTab />
       </Box>
     </SafeAreaView>
