@@ -17,6 +17,9 @@ const theme = createTheme({
     secondary: palette.limegreen,
     buttonText: palette.white,
     buttonText_off: palette.black,
+    headerText: palette.black,
+    authBackground: palette.WhiteSmoke,
+    buttonBackground: palette.grey,
   },
   spacing: {
     nil: 0,
@@ -50,27 +53,30 @@ const theme = createTheme({
 
   buttonVariants: {
     defaults: {},
-    subcategory: {
+    google: {
       borderRadius: moderateScale(10),
       alignItems: 'center',
-      justifyContent: 'center',
-      paddingVertical: 6,
+      justifyContent: 'space-around',
+      paddingVertical: 2,
       paddingHorizontal: 4,
+      flexDirection: 'row',
+      width: moderateScale(250),
+      height: moderateVerticalScale(45),
     },
   },
   textVariants: {
     default: {},
-    button: {
+    google: {
       fontSize: moderateScale(16),
       color: 'buttonText',
-      fontWeight: '600',
+      fontWeight: '700',
       fontFamily: 'SFProText-Bold',
+      paddingRight: 2,
     },
-
-    buttonoff: {
-      fontSize: moderateScale(16),
-      color: 'buttonText_off',
-      fontWeight: '600',
+    logoText: {
+      fontSize: moderateScale(20),
+      color: 'headerText',
+      fontWeight: '700',
       fontFamily: 'SFProText-Bold',
     },
   },

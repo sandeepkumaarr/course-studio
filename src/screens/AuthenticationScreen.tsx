@@ -1,11 +1,12 @@
-import {StyleSheet, Text, View, Button, TouchableOpacity} from 'react-native';
+import {StyleSheet} from 'react-native';
 import React from 'react';
 
-import {
-  GoogleSignin,
-  statusCodes,
-} from '@react-native-google-signin/google-signin';
+import {GoogleSignin} from '@react-native-google-signin/google-signin';
 import auth from '@react-native-firebase/auth';
+import {scale, verticalScale} from 'react-native-size-matters';
+
+import {Box, Button, Text} from '../components/index';
+import {SVGIcon} from '../components/SVGIcon';
 
 GoogleSignin.configure({
   webClientId:
@@ -17,7 +18,7 @@ GoogleSignin.configure({
 });
 
 const AuthenticationScreen = () => {
-  async function onGoogleButtonPress() {
+  const onGoogleButtonPress = async () => {
     // Get the users ID token
     const {idToken} = await GoogleSignin.signIn();
 
@@ -26,25 +27,46 @@ const AuthenticationScreen = () => {
 
     // Sign-in the user with the credential
     return auth().signInWithCredential(googleCredential);
-  }
+  };
 
   return (
-    <View
-      style={{
-        flex: 1,
-      }}>
-      <TouchableOpacity
-        style={{
-          backgroundColor: 'red',
-          marginTop: 200,
-        }}
-        onPress={() => onGoogleButtonPress().then(data => console.log(data))}>
-        <Text>Google</Text>
-      </TouchableOpacity>
-    </View>
+    <Box
+      flex={1}
+      justifyContent={'space-around'}
+      backgroundColor="authBackground">
+      <Box alignItems={'center'} flex={4} justifyContent="center">
+        <Box marginBottom={12}>
+          <Text variant={'logoText'}>Course Studio Podcast</Text>
+        </Box>
+
+        <Box>
+          <SVGIcon
+            type={'logo'}
+            height={`${verticalScale(100)}`}
+            width={`${scale(100)}`}
+          />
+        </Box>
+      </Box>
+
+      <Box
+        flex={3}
+        alignItems={'center'}
+        backgroundColor="secondary"
+        justifyContent={'center'}>
+        <Button
+          showIcon
+          label={'Continue with Google'}
+          backgroundColor={'buttonBackground'}
+          variant="google"
+          marginHorizontal={5}
+          textVariants="google"
+          iconWidth={`${scale(24)}`}
+          iconHeight={`${verticalScale(24)}`}
+          onPress={() => onGoogleButtonPress()}
+        />
+      </Box>
+    </Box>
   );
 };
 
 export default AuthenticationScreen;
-
-const styles = StyleSheet.create({});

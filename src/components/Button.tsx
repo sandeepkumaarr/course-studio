@@ -1,5 +1,5 @@
 //Node Modules imports
-import React from 'react';
+import React, {forwardRef} from 'react';
 import {TouchableOpacity} from 'react-native';
 import {
   VariantProps,
@@ -14,6 +14,7 @@ import {
 import {Theme} from '../themes/default';
 import Box from './Box';
 import Text from './Text';
+import {SVGIcon, SVGTypes} from './SVGIcon';
 
 const buttonVariant = createVariant({themeKey: 'buttonVariants'});
 const ButtonContainer = createRestyleComponent<
@@ -23,25 +24,42 @@ const ButtonContainer = createRestyleComponent<
 
 const restyleFunctions = [buttonVariant as any, backgroundColor];
 
-type Props = VariantProps<Theme, 'textVariants', 'textVariants'> &
+type ButtonProps = React.ComponentPropsWithRef<typeof TouchableOpacity> &
+  VariantProps<Theme, 'textVariants', 'textVariants'> &
   AllProps<Theme> &
   VariantProps<Theme, 'buttonVariants'> & {
-    onPress: () => void;
-    label: string;
+    label?: string;
+    showIcon?: boolean;
+    buttonIcon?: SVGTypes;
+    iconWidth?: string;
+    iconHeight?: string;
   };
 
-const Button = ({onPress, textVariants, ...rest}: Props) => {
-  //States,props and hooks
-  const props = useRestyle([restyleFunctions], rest);
-  const {label} = rest;
+export const Button = forwardRef<TouchableOpacity, ButtonProps>(
+  ({...rest}, ref) => {
+    //Hooks and props
+    const props = useRestyle([restyleFunctions], rest);
+    const {
+      label,
+      textVariants,
+      buttonIcon = 'google',
+      iconWidth = '24',
+      iconHeight = '24',
+      showIcon = false,
+    } = rest;
 
-  return (
-    <TouchableOpacity onPress={onPress}>
-      <ButtonContainer {...props}>
-        <Text variant={textVariants}>{label}</Text>
-      </ButtonContainer>
-    </TouchableOpacity>
-  );
-};
+    //JSX logics
+    return (
+      <TouchableOpacity ref={ref} {...props}>
+        <ButtonContainer {...props}>
+          {showIcon ? (
+            <SVGIcon type={buttonIcon} height={iconHeight} width={iconWidth} />
+          ) : null}
+          {label ? <Text variant={textVariants}>{label}</Text> : null}
+        </ButtonContainer>
+      </TouchableOpacity>
+    );
+  },
+);
 
 export default Button;

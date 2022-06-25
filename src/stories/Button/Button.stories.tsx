@@ -1,37 +1,69 @@
-import React from 'react';
-import {action} from '@storybook/addon-actions';
-import {text} from '@storybook/addon-knobs';
+import React, {useState} from 'react';
+
 import {storiesOf} from '@storybook/react-native';
-import {View} from 'react-native';
-import {
-  scale,
-  verticalScale,
-  moderateScale,
-  moderateVerticalScale,
-} from 'react-native-size-matters';
+import {scale, verticalScale} from 'react-native-size-matters';
 
 import {Button} from '../../components/index';
 import CenterView from '../CenterView';
 
 storiesOf('Button', module)
   .addDecorator(getStory => <CenterView>{getStory()}</CenterView>)
-  .add('Selected Button', () => (
+  .add('Google', () => (
     <Button
-      onPress={() => console.log('Button Pressed')}
-      label={'Default Button'}
-      backgroundColor={'secondary'}
-      variant="subcategory"
+      showIcon
+      label={'Continue with Google'}
+      backgroundColor={'primary'}
+      variant="google"
       marginHorizontal={5}
-      textVariants="button"
+      textVariants="google"
+      iconWidth={`${scale(24)}`}
+      iconHeight={`${verticalScale(24)}`}
     />
   ))
-  .add('UnSelected Button', () => (
+  .add('Play-Pause', () =>
+    React.createElement(() => {
+      const [isPlay, setIsPlay] = useState(false);
+
+      return (
+        <>
+          <Button
+            alignItems={'center'}
+            showIcon
+            iconWidth={`${scale(30)}`}
+            iconHeight={`${verticalScale(30)}`}
+            buttonIcon={isPlay ? 'pause' : 'play'}
+            onPress={() => setIsPlay(prevState => !prevState)}
+          />
+
+          <Button
+            alignItems={'center'}
+            showIcon
+            iconWidth={`${scale(60)}`}
+            iconHeight={`${verticalScale(60)}`}
+            buttonIcon={isPlay ? 'pause' : 'play'}
+            onPress={() => setIsPlay(prevState => !prevState)}
+            marginTop={10}
+          />
+
+          <Button
+            alignItems={'center'}
+            showIcon
+            iconWidth={`${scale(30)}`}
+            iconHeight={`${verticalScale(30)}`}
+            buttonIcon={isPlay ? 'download' : 'play'}
+            onPress={() => setIsPlay(prevState => !prevState)}
+            marginTop={10}
+          />
+        </>
+      );
+    }),
+  )
+  .add('Minimize', () => (
     <Button
-      onPress={() => console.log('Button Pressed')}
-      label={'Default Button'}
-      backgroundColor={'primary'}
-      variant="subcategory"
-      marginHorizontal={5}
-      textVariants="buttonoff"
+      alignItems={'center'}
+      showIcon
+      iconWidth={`${scale(30)}`}
+      iconHeight={`${verticalScale(30)}`}
+      buttonIcon={'minimize'}
     />
   ));
