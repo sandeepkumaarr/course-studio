@@ -1,7 +1,6 @@
 import {ThemeProvider} from '@shopify/restyle';
 import React, {useEffect, useState} from 'react';
 import {StatusBar, LogBox, ActivityIndicator} from 'react-native';
-import AuthNavigator from './src/navigation/AuthNavigator';
 import Navigator from './src/navigation/Navigator';
 import auth, {FirebaseAuthTypes} from '@react-native-firebase/auth';
 
@@ -44,7 +43,7 @@ const App = () => {
     <>
       <StatusBar barStyle={'dark-content'} />
       <ThemeProvider theme={theme}>
-        {!userDetails?.id ? <AuthNavigator /> : <Navigator />}
+        <Navigator />
       </ThemeProvider>
     </>
   );

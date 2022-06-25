@@ -10420,6 +10420,14 @@ react-native-modal-datetime-picker@^7.4.2:
     prop-types "^15.7.2"
     react-native-modal "^11.0.2"
 
+react-native-modal-popover@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/react-native-modal-popover/-/react-native-modal-popover-2.1.0.tgz#45a2060012796f29184e6c41b787f14336d3b435"
+  integrity sha512-t7KMk1q5Hi3jkk3/0fpa3mA7E3TJLL/Uz48Fa07AlocjMbG3okim9fNPLf5dJGw4JlcYWxLMYeswEcTjKr0M1g==
+  dependencies:
+    lodash "^4.17.21"
+    prop-types "^15.7.2"
+
 react-native-modal-selector@^2.0.2:
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/react-native-modal-selector/-/react-native-modal-selector-2.1.1.tgz#9c3a544f82f805c739866894edadc0915979c4d8"

@@ -6,6 +6,7 @@ import Pause from '../assets/images/svg/pause.svg';
 import Download from '../assets/images/svg/download.svg';
 import Minimize from '../assets/images/svg/minimize.svg';
 import Logo from '../assets/images/svg/logo.svg';
+import Home from '../assets/images/svg/home.svg';
 
 export declare type SVGTypes =
   | 'google'
@@ -13,7 +14,8 @@ export declare type SVGTypes =
   | 'pause'
   | 'download'
   | 'minimize'
-  | 'logo';
+  | 'logo'
+  | 'home';
 
 type SVGprops = {
   type: SVGTypes;
@@ -53,6 +55,10 @@ export const SVGIcon: React.FC<SVGprops> = ({type, height, width, style}) => {
 
     case 'logo':
       Component = Logo;
+      break;
+
+    case 'home':
+      Component = Home;
       break;
   }
 

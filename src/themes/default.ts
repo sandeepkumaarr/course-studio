@@ -6,6 +6,7 @@ const palette = {
   WhiteSmoke: '#e5e5e5',
   grey: '#303030',
   limegreen: '#9deec4',
+  meatBrown: 'rgba(232, 168, 69,0.5)',
 
   black: '#0B0B0B',
   white: '#F0F2F3',
@@ -20,6 +21,7 @@ const theme = createTheme({
     headerText: palette.black,
     authBackground: palette.WhiteSmoke,
     buttonBackground: palette.grey,
+    bottomTabHighlight: palette.meatBrown,
   },
   spacing: {
     nil: 0,
@@ -63,6 +65,13 @@ const theme = createTheme({
       width: moderateScale(250),
       height: moderateVerticalScale(45),
     },
+    logout: {
+      borderRadius: moderateScale(10),
+      alignItems: 'center',
+      justifyContent: 'space-around',
+      width: moderateScale(100),
+      height: moderateVerticalScale(45),
+    },
   },
   textVariants: {
     default: {},
@@ -74,6 +83,13 @@ const theme = createTheme({
       paddingRight: 2,
     },
     logoText: {
+      fontSize: moderateScale(20),
+      color: 'headerText',
+      fontWeight: '700',
+      fontFamily: 'SFProText-Bold',
+    },
+
+    header: {
       fontSize: moderateScale(20),
       color: 'headerText',
       fontWeight: '700',
