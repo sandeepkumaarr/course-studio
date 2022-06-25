@@ -1,7 +1,7 @@
 import {SafeAreaView, StyleSheet, TouchableOpacity} from 'react-native';
 import React from 'react';
 import {BottomTab, Box, Button, Text} from '../components';
-import {scale, verticalScale} from 'react-native-size-matters';
+import {moderateScale, scale, verticalScale} from 'react-native-size-matters';
 import auth from '@react-native-firebase/auth';
 import {useDispatch, useSelector} from 'react-redux';
 import {Popover, usePopover} from 'react-native-modal-popover';
@@ -34,17 +34,21 @@ const HomeScreen = () => {
         flexDirection={'row'}
         alignItems="center"
         justifyContent={'space-between'}
-        paddingHorizontal={10}>
+        paddingHorizontal={10}
+        marginTop={2}>
         <Text variant={'header'}>All Episodes</Text>
 
         <TouchableOpacity ref={touchableRef} onPress={openPopover}>
           <FastImage
-            style={{width: 50, height: 50, borderRadius: 50}}
+            style={{
+              width: Math.round(moderateScale(50)),
+              height: Math.round(moderateScale(50)),
+              borderRadius: 50,
+            }}
             source={{
               uri: userDetails?.photoURL
                 ? userDetails?.photoURL
                 : 'https://i.ibb.co/k9XzrMJ/pngtree-user-avatar-placeholder-black-png-image-3918427-removebg-preview.png',
-              headers: {Authorization: 'someAuthToken'},
               priority: FastImage.priority.normal,
             }}
             resizeMode={FastImage.resizeMode.contain}

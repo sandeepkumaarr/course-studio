@@ -95,6 +95,26 @@ const theme = createTheme({
       fontWeight: '700',
       fontFamily: 'SFProText-Bold',
     },
+    cardText: {
+      flex: 1,
+      flexWrap: 'wrap',
+      fontSize: moderateScale(16),
+      color: 'buttonBackground',
+      fontWeight: '500',
+      fontFamily: 'SFProText-Regular',
+    },
+
+    cardDate: {
+      fontSize: moderateScale(13),
+      color: 'buttonBackground',
+      fontWeight: '500',
+      fontFamily: 'SFProText-Regular',
+    },
+  },
+
+  cardVariants: {
+    defaults: {},
+    episodes: {},
   },
 });
 
