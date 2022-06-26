@@ -37,6 +37,8 @@ const App = () => {
     (state: State) => state.Audio?.showMiniPlayer,
   );
 
+  const UserDetails = useSelector((state: State) => state.User?.userDetails);
+
   const onAuthStateChanged = (user: FirebaseAuthTypes.User | null) => {
     dispatch(
       setUserDetailsActionCreator({
@@ -64,20 +66,23 @@ const App = () => {
       <GestureHandlerRootView style={styles.container}>
         <ThemeProvider theme={theme}>
           <Navigator />
+          {UserDetails?.id ? (
+            <>
+              <Box flex={1} position={'absolute'} bottom={0} width={'100%'}>
+                {showMiniPlayer ? (
+                  <TouchableOpacity
+                    onPress={() =>
+                      dispatch(setMaxPlayerSizeActionCreator(['50%', '95%']))
+                    }>
+                    <MinimizedPlayer />
+                  </TouchableOpacity>
+                ) : null}
+                <BottomTab />
+              </Box>
 
-          <Box flex={1} position={'absolute'} bottom={0} width={'100%'}>
-            {showMiniPlayer ? (
-              <TouchableOpacity
-                onPress={() =>
-                  dispatch(setMaxPlayerSizeActionCreator(['50%', '95%']))
-                }>
-                <MinimizedPlayer />
-              </TouchableOpacity>
-            ) : null}
-            <BottomTab />
-          </Box>
-
-          <MaximizedPlayer />
+              <MaximizedPlayer />
+            </>
+          ) : null}
         </ThemeProvider>
       </GestureHandlerRootView>
     </>
