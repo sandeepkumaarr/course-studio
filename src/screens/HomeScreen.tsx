@@ -2,21 +2,12 @@ import {
   ActivityIndicator,
   FlatList,
   SafeAreaView,
-  ScrollView,
   StyleSheet,
   TouchableOpacity,
   View,
 } from 'react-native';
-import React, {useContext, useEffect} from 'react';
-import {
-  BottomTab,
-  Box,
-  Button,
-  EpisodesCard,
-  MaximizedPlayer,
-  MinimizedPlayer,
-  Text,
-} from '../components';
+import React, {useEffect} from 'react';
+import {Box, Button, EpisodesCard, Text} from '../components';
 import {
   moderateScale,
   moderateVerticalScale,
@@ -30,7 +21,6 @@ import {Popover, usePopover} from 'react-native-modal-popover';
 import {setUserDetailsActionCreator} from '../redux/reducers/userReducer';
 import FastImage from 'react-native-fast-image';
 import {State} from '../types/commons';
-import {AudioContextInterface, AudioContext} from '../context/AudioContext';
 import {getEpisodes} from '../redux/actions/HomeActions';
 
 const HomeScreen = () => {
@@ -40,10 +30,6 @@ const HomeScreen = () => {
   const episodesListLoading = useSelector(
     (state: State) => state.Home?.EpisodesLoading,
   );
-
-  const {handlePlayerModalPress} = useContext(
-    AudioContext,
-  ) as AudioContextInterface;
 
   const {
     openPopover,
@@ -153,15 +139,6 @@ const HomeScreen = () => {
           />
         )}
       </Box>
-
-      <Box flex={1} position={'absolute'} bottom={0} width={'100%'}>
-        <TouchableOpacity onPress={handlePlayerModalPress}>
-          <MinimizedPlayer />
-        </TouchableOpacity>
-        <BottomTab />
-      </Box>
-
-      <MaximizedPlayer />
     </SafeAreaView>
   );
 };

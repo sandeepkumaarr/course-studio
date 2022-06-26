@@ -1,26 +1,16 @@
 import {StyleSheet, Dimensions} from 'react-native';
-import React, {useState} from 'react';
+import React from 'react';
 import Box from './Box';
-import Button from './Button';
 import Text from './Text';
-import {moderateScale, scale, verticalScale} from 'react-native-size-matters';
+import {moderateScale} from 'react-native-size-matters';
 import FastImage from 'react-native-fast-image';
-import * as Progress from 'react-native-progress';
+import AudioPlayer from './AudioPlayer';
 
 const {width} = Dimensions.get('window');
 
 const MinimizedPlayer = () => {
-  const [isPlay, setIsPlay] = useState(false);
-
   return (
     <>
-      <Progress.Bar
-        progress={0.3}
-        width={width}
-        color="#9deec4"
-        unfilledColor="#e5e5e5"
-        borderColor="#303030"
-      />
       <Box
         flexDirection={'row'}
         alignItems="center"
@@ -46,14 +36,12 @@ const MinimizedPlayer = () => {
           </Box>
         </Box>
 
-        <Box paddingRight={5}>
-          <Button
-            alignItems={'center'}
-            showIcon
-            iconWidth={`${scale(30)}`}
-            iconHeight={`${verticalScale(30)}`}
-            buttonIcon={isPlay ? 'pause' : 'play'}
-            onPress={() => setIsPlay(prevState => !prevState)}
+        <Box paddingRight={5} marginBottom={5}>
+          <AudioPlayer
+            showSlider={false}
+            showDuration={false}
+            playerIconWidth={30}
+            playerIconHeight={30}
           />
         </Box>
       </Box>

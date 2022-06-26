@@ -2,16 +2,14 @@ import {StyleSheet} from 'react-native';
 import React from 'react';
 
 import {scale, verticalScale} from 'react-native-size-matters';
-import {useNavigation, useRoute} from '@react-navigation/native';
 
 import Box from './Box';
 import Button from './Button';
 import routes from '../navigation/routes';
 
-const BottomTab = () => {
-  const navigation = useNavigation() || {};
-  const {name} = useRoute() || {};
+import * as RootNavigation from '../navigation/RootNavigation';
 
+const BottomTab = () => {
   return (
     <Box
       flexDirection={'row'}
@@ -20,11 +18,6 @@ const BottomTab = () => {
       alignItems="center">
       <Button
         alignItems={'center'}
-        backgroundColor={
-          name === routes.HOME_SCREEN
-            ? 'bottomTabHighlight'
-            : 'bottomTabBackground'
-        }
         paddingVertical={5}
         paddingHorizontal={20}
         showIcon
@@ -32,19 +25,12 @@ const BottomTab = () => {
         iconHeight={`${verticalScale(35)}`}
         buttonIcon={'home'}
         onPress={() => {
-          if (name !== routes.HOME_SCREEN) {
-            navigation.navigate(routes.HOME_SCREEN as never, {} as never);
-          }
+          RootNavigation.navigate(routes.HOME_SCREEN as never, {} as never);
         }}
       />
 
       <Button
         alignItems={'center'}
-        backgroundColor={
-          name === routes.DOWNLOAD_SCREEN
-            ? 'bottomTabHighlight'
-            : 'bottomTabBackground'
-        }
         paddingVertical={5}
         paddingHorizontal={20}
         showIcon
@@ -52,9 +38,7 @@ const BottomTab = () => {
         iconHeight={`${verticalScale(35)}`}
         buttonIcon={'download'}
         onPress={() => {
-          if (name !== routes.DOWNLOAD_SCREEN) {
-            navigation.navigate(routes.DOWNLOAD_SCREEN as never, {} as never);
-          }
+          RootNavigation.navigate(routes.DOWNLOAD_SCREEN as never, {} as never);
         }}
       />
     </Box>

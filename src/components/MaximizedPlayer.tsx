@@ -1,42 +1,30 @@
-import {StyleSheet, Dimensions} from 'react-native';
-import React, {useCallback, useContext, useMemo, useState} from 'react';
-import {
-  BottomSheetBackdrop,
-  BottomSheetModal,
-  BottomSheetModalProvider,
-} from '@gorhom/bottom-sheet';
+import {StyleSheet} from 'react-native';
+import React, {useContext} from 'react';
+import {BottomSheetModal, BottomSheetModalProvider} from '@gorhom/bottom-sheet';
 
 import {scale, verticalScale, moderateScale} from 'react-native-size-matters';
+import {useDispatch, useSelector} from 'react-redux';
+import FastImage from 'react-native-fast-image';
 
 import Box from './Box';
 import Button from './Button';
 import Text from './Text';
 import Card from './Cards/Card';
-import FastImage from 'react-native-fast-image';
-import Slider from '@react-native-community/slider';
 import {AudioContextInterface, AudioContext} from '../context/AudioContext';
-
-const {width} = Dimensions.get('window');
+import AudioPlayer from './AudioPlayer';
+import * as AppState from '../types/commons';
+import {setMaxPlayerSizeActionCreator} from '../redux/reducers/AudioReducer';
 
 type Props = {};
 
 const MaximizedPlayer = ({...rest}: Props) => {
-  // variables
-  const snapPointsProject = useMemo(() => ['70%', '95%'], []);
-  const [isPlay, setIsPlay] = useState(false);
-  const {PlayerModalRef, handlePlayerModalClose} = useContext(
-    AudioContext,
-  ) as AudioContextInterface;
+  const dispatch = useDispatch();
 
-  const renderBackdrop = useCallback(
-    props => <BottomSheetBackdrop {...props} pressBehavior="close" />,
-    [],
+  const maxPlayerSize = useSelector(
+    (state: AppState.State) => state.Audio?.maxPlayerSize,
   );
 
-  const renderProjectBackdrop = useCallback(
-    props => <BottomSheetBackdrop {...props} pressBehavior="close" />,
-    [],
-  );
+  const {PlayerModalRef} = useContext(AudioContext) as AudioContextInterface;
 
   return (
     <BottomSheetModalProvider>
@@ -44,10 +32,9 @@ const MaximizedPlayer = ({...rest}: Props) => {
         handleStyle={{
           backgroundColor: '#e5e5e5',
         }}
-        backdropComponent={renderProjectBackdrop}
         ref={PlayerModalRef}
         index={1}
-        snapPoints={snapPointsProject}>
+        snapPoints={maxPlayerSize}>
         <Box backgroundColor={'authBackground'} flex={1}>
           <Box
             flexDirection={'row'}
@@ -61,7 +48,9 @@ const MaximizedPlayer = ({...rest}: Props) => {
                 iconWidth={`${scale(30)}`}
                 iconHeight={`${verticalScale(30)}`}
                 buttonIcon={'minimize'}
-                onPress={handlePlayerModalClose}
+                onPress={() =>
+                  dispatch(setMaxPlayerSizeActionCreator(['1%', '2%']))
+                }
               />
             </Box>
             <Box>
@@ -89,41 +78,7 @@ const MaximizedPlayer = ({...rest}: Props) => {
               resizeMode={FastImage.resizeMode.contain}
             />
           </Card>
-
-          <Box alignItems={'center'} marginTop={10}>
-            <Slider
-              style={{width: width - 50, height: 40}}
-              minimumValue={0}
-              maximumValue={1}
-              minimumTrackTintColor="#9deec4"
-              maximumTrackTintColor="#303030"
-            />
-          </Box>
-
-          <Box
-            flexDirection={'row'}
-            alignItems={'center'}
-            justifyContent={'space-around'}
-            marginTop={5}>
-            <Box>
-              <Text variant={'maxPlayerTime'}>1.35</Text>
-            </Box>
-
-            <Box>
-              <Button
-                alignItems={'center'}
-                showIcon
-                iconWidth={`${scale(100)}`}
-                iconHeight={`${verticalScale(100)}`}
-                buttonIcon={isPlay ? 'pause' : 'play'}
-                onPress={() => setIsPlay(prevState => !prevState)}
-              />
-            </Box>
-
-            <Box>
-              <Text variant={'maxPlayerTime'}>1.35</Text>
-            </Box>
-          </Box>
+          <AudioPlayer />
         </Box>
       </BottomSheetModal>
     </BottomSheetModalProvider>
