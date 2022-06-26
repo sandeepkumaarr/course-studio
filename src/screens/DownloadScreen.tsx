@@ -1,8 +1,16 @@
 import {SafeAreaView, StyleSheet} from 'react-native';
-import React from 'react';
+import React, {useEffect} from 'react';
 import {Box, DownloadsCard, Text} from '../components';
 
 const DownloadScreen = () => {
+  useEffect(() => {
+    console.log('Download Screen loaded');
+
+    return () => {
+      null;
+    };
+  }, []);
+
   return (
     <SafeAreaView style={styles.container}>
       <Box paddingHorizontal={5} paddingVertical={5}>

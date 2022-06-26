@@ -1,14 +1,26 @@
 import {StyleSheet, Dimensions} from 'react-native';
-import React from 'react';
+import React, {useEffect} from 'react';
 import Box from './Box';
 import Text from './Text';
 import {moderateScale} from 'react-native-size-matters';
 import FastImage from 'react-native-fast-image';
 import AudioPlayer from './AudioPlayer';
+import {useSelector} from 'react-redux';
+import {State} from '../types/commons';
 
 const {width} = Dimensions.get('window');
 
 const MinimizedPlayer = () => {
+  const Title = useSelector((state: State) => state.Audio?.title);
+
+  useEffect(() => {
+    console.log('Minimized Player Loaded');
+
+    return () => {
+      null;
+    };
+  }, []);
+
   return (
     <>
       <Box
@@ -31,7 +43,7 @@ const MinimizedPlayer = () => {
           </Box>
           <Box flexDirection={'row'} width={Math.round(width / 1.6)}>
             <Text variant="miniplayerText" numberOfLines={2}>
-              Good Inside Episode 4: What Should I Say When My Kid Is Afraid?
+              {Title}
             </Text>
           </Box>
         </Box>

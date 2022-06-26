@@ -24,7 +24,7 @@ import {
 import {setMaxPlayerSizeActionCreator} from './src/redux/reducers/AudioReducer';
 
 // import {NativeModules} from 'react-native';
-// NativeModules.DevSettings.setIsDebuggingRemotely(true);
+// NativeModules.DevSettings.setIsDebuggingRemotely(false);
 
 LogBox.ignoreAllLogs();
 

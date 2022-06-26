@@ -46,6 +46,7 @@ const HomeScreen = () => {
   };
 
   useEffect(() => {
+    console.log('Home Screen loaded');
     dispatch(getEpisodes({}));
 
     return () => {

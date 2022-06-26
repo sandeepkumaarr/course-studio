@@ -56,8 +56,12 @@ const togglePlayBack = async (
       if (progress.duration === progress.position) {
         setUpPlayer(url, name);
       }
+      console.log('Continuing to play audio');
+
       await TrackPlayer.play();
     } else {
+      console.log('Pausing Audio');
+
       await TrackPlayer.pause();
     }
   }
@@ -66,6 +70,7 @@ const togglePlayBack = async (
 const playOnMount = async () => {
   const currentTrack = await TrackPlayer.getCurrentTrack();
   if (currentTrack !== null) {
+    console.log('Playing audio now');
     await TrackPlayer.play();
   }
 };
@@ -121,6 +126,7 @@ const AudioPlayer = ({...rest}: AudioPlayerProps) => {
             minimumValue={0}
             maximumValue={duration}
             onSlidingComplete={async value => {
+              console.log('seeking Audio to value: ', value);
               await TrackPlayer.seekTo(value);
             }}
           />
