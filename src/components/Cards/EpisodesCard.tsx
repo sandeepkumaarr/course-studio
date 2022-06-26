@@ -1,4 +1,4 @@
-import {StyleSheet} from 'react-native';
+import {StyleSheet, Dimensions} from 'react-native';
 import React from 'react';
 import Card from './Card';
 import Box from '../Box';
@@ -9,10 +9,15 @@ import dayjs from 'dayjs';
 
 import Button from '../Button';
 import Text from '../Text';
+import {EpisodeItems} from '../../types/home';
 
 dayjs.extend(customParseFormat);
 
-const EpisodesCard = () => {
+const {width} = Dimensions.get('window');
+
+const EpisodesCard = ({...rest}: EpisodeItems) => {
+  const {name, created_at} = rest;
+
   return (
     <Card
       flexDirection={'row'}
@@ -31,9 +36,11 @@ const EpisodesCard = () => {
       </Card>
 
       <Box flex={1} paddingHorizontal={5}>
-        <Box flexDirection={'row'}>
+        <Box
+          flexDirection={'row'}
+          width={Math.round(moderateScale(width / 2.4))}>
           <Text variant="cardText" numberOfLines={3}>
-            Good Inside Episode 4: What Should I Say When My Kid Is Afraid?
+            {name}
           </Text>
         </Box>
 
@@ -44,9 +51,7 @@ const EpisodesCard = () => {
           marginTop={3}>
           <Box paddingLeft={3}>
             <Text variant={'cardDate'} numberOfLines={1}>
-              {dayjs('2022-06-21T18:38:48+00:00', `YY/MM/DD, hh:mm`).format(
-                `MMM D YYYY`,
-              )}
+              {dayjs(created_at, `YY/MM/DD, hh:mm`).format(`MMM D YYYY`)}
             </Text>
           </Box>
 

@@ -10,6 +10,9 @@ import {useDispatch, useSelector} from 'react-redux';
 import {setUserDetailsActionCreator} from './src/redux/reducers/userReducer';
 import {State} from './src/types/commons';
 
+// import {NativeModules} from 'react-native';
+// NativeModules.DevSettings.setIsDebuggingRemotely(false);
+
 LogBox.ignoreAllLogs();
 
 const STORYBOOK_START = false;
