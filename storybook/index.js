@@ -6,6 +6,10 @@ import {getStorybookUI, configure, addDecorator} from '@storybook/react-native';
 import {withKnobs} from '@storybook/addon-knobs';
 import {loadStories} from './storyLoader';
 import {ThemeProvider} from '@shopify/restyle';
+import {Provider} from 'react-redux';
+import AudioProvider from '../src/context/AudioContext';
+import store from '../src/redux/store';
+
 import theme from '../src/themes/default';
 
 import './rn-addons';
@@ -13,7 +17,13 @@ import './rn-addons';
 // enables knobs for all stories
 addDecorator(withKnobs);
 
-addDecorator(story => <ThemeProvider theme={theme}>{story()}</ThemeProvider>);
+addDecorator(story => (
+  <AudioProvider>
+    <Provider store={store}>
+      <ThemeProvider theme={theme}>{story()}</ThemeProvider>
+    </Provider>
+  </AudioProvider>
+));
 
 // import stories
 configure(() => {

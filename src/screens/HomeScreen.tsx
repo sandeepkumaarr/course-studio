@@ -4,12 +4,13 @@ import {
   StyleSheet,
   TouchableOpacity,
 } from 'react-native';
-import React from 'react';
+import React, {useContext} from 'react';
 import {
   BottomTab,
   Box,
   Button,
   EpisodesCard,
+  MaximizedPlayer,
   MinimizedPlayer,
   Text,
 } from '../components';
@@ -21,10 +22,14 @@ import {Popover, usePopover} from 'react-native-modal-popover';
 import {setUserDetailsActionCreator} from '../redux/reducers/userReducer';
 import FastImage from 'react-native-fast-image';
 import {State} from '../types/commons';
+import {AudioContextInterface, AudioContext} from '../context/AudioContext';
 
 const HomeScreen = () => {
   const dispatch = useDispatch();
   const userDetails = useSelector((state: State) => state.User?.userDetails);
+  const {handlePlayerModalPress} = useContext(
+    AudioContext,
+  ) as AudioContextInterface;
 
   const {
     openPopover,
@@ -99,9 +104,13 @@ const HomeScreen = () => {
       </Box>
 
       <Box flex={1} position={'absolute'} bottom={0} width={'100%'}>
-        <MinimizedPlayer />
+        <TouchableOpacity onPress={handlePlayerModalPress}>
+          <MinimizedPlayer />
+        </TouchableOpacity>
         <BottomTab />
       </Box>
+
+      <MaximizedPlayer />
     </SafeAreaView>
   );
 };

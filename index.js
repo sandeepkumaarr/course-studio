@@ -18,6 +18,7 @@ import {
   isReadyRef,
 } from './src/navigation/RootNavigation';
 import store from './src/redux/store';
+import AudioProvider from './src/context/AudioContext';
 
 const Root = () => {
   useEffect(() => {
@@ -27,15 +28,17 @@ const Root = () => {
   }, []);
 
   return (
-    <Provider store={store}>
-      <NavigationContainer
-        ref={navigationRef}
-        onReady={() => {
-          isReadyRef.current = true;
-        }}>
-        <App />
-      </NavigationContainer>
-    </Provider>
+    <AudioProvider>
+      <Provider store={store}>
+        <NavigationContainer
+          ref={navigationRef}
+          onReady={() => {
+            isReadyRef.current = true;
+          }}>
+          <App />
+        </NavigationContainer>
+      </Provider>
+    </AudioProvider>
   );
 };
 

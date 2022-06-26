@@ -126,6 +126,12 @@ const theme = createTheme({
       fontWeight: '500',
       fontFamily: 'SFProText-Regular',
     },
+    maxPlayerTime: {
+      fontSize: moderateScale(16),
+      color: 'buttonBackground',
+      fontWeight: '800',
+      fontFamily: 'SFProText-Bold',
+    },
   },
 
   cardVariants: {
