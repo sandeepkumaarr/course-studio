@@ -15,47 +15,55 @@ import {scale, verticalScale} from 'react-native-size-matters';
 import Text from './Text';
 import {useSelector} from 'react-redux';
 import * as AppState from '../types/commons';
+import {EpisodeItems} from '../types/home';
 
-const setUpPlayer = async (
-  url: string | number | null,
-  title: {toString: () => any},
-) => {
-  if (url) {
-    const currentTrack = await TrackPlayer.getCurrentTrack();
-    if (currentTrack !== null) {
-      await TrackPlayer.destroy();
-    }
+type trackProps = {
+  id: string;
+  url: string;
+  title: string;
+  artist: string;
+  artwork: string;
+};
 
+const setUpPlayer = async (musicList: EpisodeItems[]) => {
+  let ModifiedMusicList: Array<trackProps> = [];
+
+  Promise.all(
+    musicList.map(item => {
+      ModifiedMusicList.push({
+        id: uuid().toString(),
+        url: item.url ? item.url : '',
+        title: item.name.toString(),
+        artist: uuid().toString(),
+        artwork: 'https://picsum.photos/200',
+      });
+    }),
+  );
+
+  if (ModifiedMusicList.length > 0) {
     await TrackPlayer.setupPlayer();
     await TrackPlayer.updateOptions({
-      capabilities: [Capability.Play, Capability.Pause, Capability.Stop],
+      capabilities: [
+        Capability.Play,
+        Capability.Pause,
+        Capability.Stop,
+        Capability.SkipToNext,
+        Capability.SkipToPrevious,
+      ],
+      stopWithApp: true,
     });
 
-    await TrackPlayer.add({
-      id: uuid().toString(),
-      url: url ? url : '',
-      title: title.toString(),
-      artist: uuid().toString(),
-      artwork: 'https://picsum.photos/200',
-    });
+    await TrackPlayer.add(ModifiedMusicList);
   } else {
     await TrackPlayer.destroy();
   }
 };
 
-const togglePlayBack = async (
-  playbackState: State,
-  url: string | number | null,
-  name: {toString: () => any},
-  progress: {duration: any; position: any},
-) => {
+const togglePlayBack = async (playbackState: State) => {
   const currentTrack = await TrackPlayer.getCurrentTrack();
 
   if (currentTrack !== null) {
     if (playbackState === State.Paused) {
-      if (progress.duration === progress.position) {
-        setUpPlayer(url, name);
-      }
       console.log('Continuing to play audio');
 
       await TrackPlayer.play();
@@ -92,21 +100,27 @@ const AudioPlayer = ({...rest}: AudioPlayerProps) => {
     playerIconHeight = 100,
   } = rest;
   const playbackState = usePlaybackState();
-  const {position, buffered, duration} = useProgress();
+  const {position, duration} = useProgress();
 
-  const name = useSelector((state: AppState.State) => state.Audio?.title);
-  const url = useSelector((state: AppState.State) => state.Audio?.url);
+  const musicList = useSelector(
+    (state: AppState.State) => state.Home?.EpisodeList,
+  );
 
   useEffect(() => {
-    setUpPlayer(url, name);
+    if (showSlider) {
+      console.log('Setting Up Player');
+
+      setUpPlayer(musicList);
+    }
 
     return () => {
       null;
     };
-  }, [url]);
+  }, []);
 
   useEffect(() => {
     if (playbackState === State.Ready) {
+      console.log('Playing Audio on mount');
       playOnMount();
     }
     return () => {
@@ -152,12 +166,7 @@ const AudioPlayer = ({...rest}: AudioPlayerProps) => {
             iconWidth={`${scale(playerIconWidth)}`}
             iconHeight={`${verticalScale(playerIconHeight)}`}
             buttonIcon={playbackState === State.Playing ? 'pause' : 'play'}
-            onPress={() =>
-              togglePlayBack(playbackState, url, name, {
-                duration: duration,
-                position: position,
-              })
-            }
+            onPress={() => togglePlayBack(playbackState)}
           />
         </Box>
 

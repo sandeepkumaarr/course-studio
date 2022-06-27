@@ -3,6 +3,7 @@ export type EpisodeItems = {
   id: number;
   name: string;
   url: string;
+  index: number;
 };
 
 export type Home = {

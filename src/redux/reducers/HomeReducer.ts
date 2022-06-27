@@ -24,8 +24,24 @@ export const HomeSlice = createSlice({
         },
         {payload}: PayloadAction<Array<EpisodeItems>>,
       ) => {
+        let episodeList: Array<EpisodeItems> = [];
+        let episodeCount = 0;
+
+        Promise.all(
+          payload.map(item => {
+            episodeList.push({
+              created_at: item.created_at,
+              id: item.id,
+              name: item.name,
+              url: item.url,
+              index: episodeCount,
+            });
+            episodeCount++;
+          }),
+        );
+
         state.EpisodesLoading = false;
-        state.EpisodeList = payload;
+        state.EpisodeList = episodeList;
       },
     );
     builder.addCase(getEpisodes.rejected, (state, {payload}) => {

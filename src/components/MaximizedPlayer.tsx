@@ -29,6 +29,7 @@ const MaximizedPlayer = ({...rest}: Props) => {
   return (
     <BottomSheetModalProvider>
       <BottomSheetModal
+        enablePanDownToClose={false}
         handleStyle={{
           backgroundColor: '#e5e5e5',
         }}

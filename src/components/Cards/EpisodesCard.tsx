@@ -14,13 +14,14 @@ import {useDispatch, useSelector} from 'react-redux';
 import {setMiniPlayerDetailsActionCreator} from '../../redux/reducers/AudioReducer';
 import {State} from '../../types/commons';
 import {AudioContextInterface, AudioContext} from '../../context/AudioContext';
+import TrackPlayer from 'react-native-track-player';
 
 dayjs.extend(customParseFormat);
 
 const {width} = Dimensions.get('window');
 
 const EpisodesCard = ({...rest}: EpisodeItems) => {
-  const {name, created_at, url, id} = rest;
+  const {name, created_at, url, id, index} = rest;
   const currentPlayerId = useSelector(
     (state: State) => state.Audio?.currentPlayingCardId,
   );
@@ -30,6 +31,10 @@ const EpisodesCard = ({...rest}: EpisodeItems) => {
   ) as AudioContextInterface;
 
   const dispatch = useDispatch();
+
+  const SkipToPlayer = async () => {
+    await TrackPlayer.skip(index);
+  };
 
   return (
     <Card
@@ -75,6 +80,11 @@ const EpisodesCard = ({...rest}: EpisodeItems) => {
             iconHeight={`${verticalScale(25)}`}
             buttonIcon={currentPlayerId == id ? 'pause' : 'play'}
             onPress={() => {
+              if (currentPlayerId) {
+                console.log('SkipToPlayer');
+
+                SkipToPlayer();
+              }
               dispatch(
                 setMiniPlayerDetailsActionCreator({
                   url: url,

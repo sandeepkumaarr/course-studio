@@ -19,6 +19,7 @@ import {
 } from './src/navigation/RootNavigation';
 import store from './src/redux/store';
 import AudioProvider from './src/context/AudioContext';
+import TrackPlayer from 'react-native-track-player';
 
 const Root = () => {
   useEffect(() => {
@@ -44,3 +45,4 @@ const Root = () => {
 
 enableScreens();
 AppRegistry.registerComponent(appName, () => Root);
+TrackPlayer.registerPlaybackService(() => require('./service'));

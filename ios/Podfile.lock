@@ -298,9 +298,9 @@ PODS:
     - ReactCommon/turbomodule/core
   - react-native-slider (4.2.3):
     - React-Core
-  - react-native-track-player (2.1.3):
+  - react-native-track-player (2.2.0-rc4):
     - React-Core
-    - SwiftAudioEx (= 0.14.7)
+    - SwiftAudioEx (= 0.15.2)
   - React-perflogger (0.68.2)
   - React-RCTActionSheet (0.68.2):
     - React-Core/RCTActionSheetHeaders (= 0.68.2)
@@ -424,7 +424,7 @@ PODS:
   - SDWebImageWebPCoder (0.8.5):
     - libwebp (~> 1.0)
     - SDWebImage/Core (~> 5.10)
-  - SwiftAudioEx (0.14.7)
+  - SwiftAudioEx (0.15.2)
   - Yoga (1.14.0)
 
 DEPENDENCIES:
@@ -626,7 +626,7 @@ SPEC CHECKSUMS:
   react-native-get-random-values: a6ea6a8a65dc93e96e24a11105b1a9c8cfe1d72a
   react-native-safe-area-context: 6c12e3859b6f27b25de4fee8201cfb858432d8de
   react-native-slider: 98b724cd3e44c3454a6d0724e796d4e9c52189ce
-  react-native-track-player: c4147afddd29de936caa06561f78a32d6502eb12
+  react-native-track-player: 54a0a51b366a018da124837d09f20690372efb35
   React-perflogger: a18b4f0bd933b8b24ecf9f3c54f9bf65180f3fe6
   React-RCTActionSheet: 547fe42fdb4b6089598d79f8e1d855d7c23e2162
   React-RCTAnimation: bc9440a1c37b06ae9ebbb532d244f607805c6034
@@ -651,7 +651,7 @@ SPEC CHECKSUMS:
   RNSVG: 302bfc9905bd8122f08966dc2ce2d07b7b52b9f8
   SDWebImage: a7f831e1a65eb5e285e3fb046a23fcfbf08e696d
   SDWebImageWebPCoder: 908b83b6adda48effe7667cd2b7f78c897e5111d
-  SwiftAudioEx: 3a4024e48f3b3e45dac6bf2668d7adbe7b83f50e
+  SwiftAudioEx: 1974c2eb942c9b54f58c3d3f5d704da527e2c5ba
   Yoga: 99652481fcd320aefa4a7ef90095b95acd181952
 
 PODFILE CHECKSUM: 7f452f13fcc58aca8f188397434427a664c1c08b

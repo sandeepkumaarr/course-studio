@@ -116,6 +116,7 @@ const HomeScreen = () => {
                 id={item.id}
                 name={item.name}
                 url={item.url}
+                index={item.index}
               />
             )}
             showsVerticalScrollIndicator={false}
