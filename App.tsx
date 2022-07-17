@@ -10,6 +10,7 @@ import {
 import Navigator from './src/navigation/Navigator';
 import auth, {FirebaseAuthTypes} from '@react-native-firebase/auth';
 import {GestureHandlerRootView} from 'react-native-gesture-handler';
+import FlashMessage from 'react-native-flash-message';
 
 import theme from './src/themes/default';
 import {useDispatch, useSelector} from 'react-redux';
@@ -83,6 +84,7 @@ const App = () => {
               <MaximizedPlayer />
             </>
           ) : null}
+          <FlashMessage position="top" />
         </ThemeProvider>
       </GestureHandlerRootView>
     </>

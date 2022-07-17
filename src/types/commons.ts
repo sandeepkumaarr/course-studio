@@ -7,3 +7,9 @@ export type State = {
   User: User;
   Audio: Audio;
 };
+
+export type ErrorHandler = {
+  bgColor: '#fc4c4c' | '#13CE66' | '#FFCC3D';
+  title: string;
+  message: string;
+};

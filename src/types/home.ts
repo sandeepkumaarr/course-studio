@@ -10,3 +10,7 @@ export type Home = {
   EpisodeList: Array<EpisodeItems>;
   EpisodesLoading: boolean;
 };
+
+export type AudioFileInfo = EpisodeItems & {
+  localFilePath: string;
+};

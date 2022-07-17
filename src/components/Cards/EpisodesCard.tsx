@@ -15,13 +15,18 @@ import {setMiniPlayerDetailsActionCreator} from '../../redux/reducers/AudioReduc
 import {State} from '../../types/commons';
 import {AudioContextInterface, AudioContext} from '../../context/AudioContext';
 import TrackPlayer from 'react-native-track-player';
+import {downloadFile} from '../../utils/downloadFile';
 
 dayjs.extend(customParseFormat);
 
 const {width} = Dimensions.get('window');
 
-const EpisodesCard = ({...rest}: EpisodeItems) => {
-  const {name, created_at, url, id, index} = rest;
+type EpisodesCardProps = EpisodeItems & {
+  isDownloads: boolean;
+};
+
+const EpisodesCard = ({...rest}: EpisodesCardProps) => {
+  const {name, created_at, url, id, index, isDownloads = false} = rest;
   const currentPlayerId = useSelector(
     (state: State) => state.Audio?.currentPlayingCardId,
   );
@@ -97,17 +102,31 @@ const EpisodesCard = ({...rest}: EpisodeItems) => {
               handlePlayerModalPress();
             }}
             paddingBottom={2}
+            paddingRight={isDownloads ? 5 : 0}
           />
 
-          <Button
-            alignItems={'center'}
-            showIcon
-            iconWidth={`${scale(30)}`}
-            iconHeight={`${verticalScale(30)}`}
-            buttonIcon={'download'}
-            paddingRight={3}
-            paddingBottom={2}
-          />
+          {!isDownloads ? (
+            <Button
+              alignItems={'center'}
+              showIcon
+              iconWidth={`${scale(30)}`}
+              iconHeight={`${verticalScale(30)}`}
+              buttonIcon={'download'}
+              paddingRight={3}
+              paddingBottom={2}
+              onPress={() => {
+                downloadFile({
+                  title: name,
+                  ext: 'mp3',
+                  downloadUrl: url,
+                  mimeType: 'audio/mpeg',
+                  created_at: created_at,
+                  id: id,
+                  index: index,
+                });
+              }}
+            />
+          ) : null}
         </Box>
       </Box>
     </Card>
