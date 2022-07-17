@@ -14,7 +14,10 @@ import {useDispatch, useSelector} from 'react-redux';
 import {setMiniPlayerDetailsActionCreator} from '../../redux/reducers/AudioReducer';
 import {State} from '../../types/commons';
 import {AudioContextInterface, AudioContext} from '../../context/AudioContext';
-import TrackPlayer from 'react-native-track-player';
+import TrackPlayer, {
+  usePlaybackState,
+  State as playerState,
+} from 'react-native-track-player';
 import {downloadFile} from '../../utils/downloadFile';
 
 dayjs.extend(customParseFormat);
@@ -31,6 +34,8 @@ const EpisodesCard = ({...rest}: EpisodesCardProps) => {
     (state: State) => state.Audio?.currentPlayingCardId,
   );
 
+  const playbackState = usePlaybackState();
+
   const {handlePlayerModalPress} = useContext(
     AudioContext,
   ) as AudioContextInterface;
@@ -39,6 +44,22 @@ const EpisodesCard = ({...rest}: EpisodesCardProps) => {
 
   const SkipToPlayer = async () => {
     await TrackPlayer.skip(index);
+  };
+
+  const togglePlayBack = async (playbackState: playerState) => {
+    const currentTrack = await TrackPlayer.getCurrentTrack();
+
+    if (currentTrack !== null) {
+      if (playbackState === playerState.Paused) {
+        console.log('Continuing to play audio');
+
+        await TrackPlayer.play();
+      } else {
+        console.log('Pausing Audio');
+
+        await TrackPlayer.pause();
+      }
+    }
   };
 
   return (
@@ -83,23 +104,35 @@ const EpisodesCard = ({...rest}: EpisodesCardProps) => {
             showIcon
             iconWidth={`${scale(30)}`}
             iconHeight={`${verticalScale(25)}`}
-            buttonIcon={currentPlayerId == id ? 'pause' : 'play'}
+            buttonIcon={
+              currentPlayerId == id &&
+              playbackState ===
+                (playerState.Playing ||
+                  playerState.Connecting ||
+                  playerState.Ready)
+                ? 'pause'
+                : 'play'
+            }
             onPress={() => {
-              if (currentPlayerId) {
-                console.log('SkipToPlayer');
-
-                SkipToPlayer();
+              if (!currentPlayerId || currentPlayerId !== id) {
+                dispatch(
+                  setMiniPlayerDetailsActionCreator({
+                    url: url,
+                    title: name,
+                    currentPlayingCardId: id,
+                    showMiniPlayer: true,
+                    maxPlayerSize: ['1%', '2%'],
+                  }),
+                );
+                handlePlayerModalPress();
               }
-              dispatch(
-                setMiniPlayerDetailsActionCreator({
-                  url: url,
-                  title: name,
-                  currentPlayingCardId: id,
-                  showMiniPlayer: true,
-                  maxPlayerSize: ['1%', '2%'],
-                }),
-              );
-              handlePlayerModalPress();
+
+              if (currentPlayerId && currentPlayerId !== id) {
+                console.log('SkipToPlayer');
+                SkipToPlayer();
+              } else if (currentPlayerId) {
+                togglePlayBack(playbackState);
+              }
             }}
             paddingBottom={2}
             paddingRight={isDownloads ? 5 : 0}
