@@ -1,6 +1,6 @@
 import {FlatList, SafeAreaView, StyleSheet, View} from 'react-native';
 import React, {useEffect, useState} from 'react';
-import {Box, DownloadsCard, EpisodesCard, Text} from '../components';
+import {Box, EpisodesCard, Text} from '../components';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import {AudioFileInfo} from '../types/home';
 import {moderateVerticalScale} from 'react-native-size-matters';
